@@ -17,12 +17,14 @@
     <input class="form-control" type = "date" name = "yearofcompletion" placeholder = "Year Of Completion" [(ngModel)]="eduModel.yearofcompletion">
     </div>
 
-    <ul class="checkbox-items">
-      <li *ngFor="let item of List">
-        <input type="checkbox" [(ngModel)]="eduModel.skill">{{item}}
-      </li>
-    </ul>
-   
+    <div class="form-group">
+      <div><label>Select skills</label></div>
+      <div *ngFor="let item of skillList">
+        <input type="checkbox"  name= "{{item.name}}" (change)="onchange()" [(ngModel)]="item.ischecked" >
+            <label>{{item.name}}</label>
+    </div> 
+      </div>
+     
     <button type="button" class="btn-lg btn-primary btn2" (click)="check()">Save</button>
 
 </form>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-review',
   templateUrl: './review.component.html',
@@ -22,6 +23,8 @@ export class ReviewComponent implements OnInit {
   institutename:string =localStorage.getItem("institutename") ||"ITER";
   degree: string=localStorage.getItem("degree")||"BTECH";
   yearofcompletion: string=localStorage.getItem("yearofcompletion")||"12/12/2020";
+ skills: string[] = JSON.parse(localStorage.getItem("skills")!);
+
   ngOnInit(): void {
   }
 

@@ -3,8 +3,7 @@ export class Education {
         public institutename:string,
         public degree: string,
         public yearofcompletion: string,
-        public skills: string[],
-        public skill: string
+        public skills: string[]
         
     ){}
 }
