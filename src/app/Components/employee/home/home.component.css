@@ -1,0 +1,21 @@
+.welcome{
+    font: bolder;
+    color: rgb(35, 60, 61);
+    margin-left: 42%;
+    margin-top: 5%;
+}
+.list{
+    margin-left: 27%;
+    font-size: larger;
+    margin-top: 4%;
+}
+.linkcolor{
+    color: rgb(0, 8, 8);
+}
+.btn1{
+    margin-left: 2%;
+}
+.info{
+    margin-left: 34%;
+    margin-top: 2%;
+}

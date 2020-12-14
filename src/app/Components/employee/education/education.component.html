@@ -1,0 +1,33 @@
+
+  <div>
+    <form #educationdetails = "ngForm"  >
+
+    <div class="form-group">
+    <label for="iname"><h5>Institute Name:</h5></label>
+    <input class="form-control" type = "text" name = "institutename" placeholder = "Institute Name"   [(ngModel)]="eduModel.institutename">
+    </div>
+
+    <div class="form-group">
+    <label for="degree"><h5>Degree:</h5></label>
+    <input class="form-control" type = "text" name = "degree" placeholder = "Degree"   [(ngModel)]="eduModel.degree">
+    </div>
+
+    <div class="form-group">
+    <label for="name"><h5>Year of Completion:</h5></label>
+    <input class="form-control" type = "date" name = "yearofcompletion" placeholder = "Year Of Completion" [(ngModel)]="eduModel.yearofcompletion">
+    </div>
+
+    <ul class="checkbox-items">
+      <li *ngFor="let item of List">
+        <input type="checkbox" [(ngModel)]="eduModel.skill">{{item}}
+      </li>
+    </ul>
+   
+    <button type="button" class="btn-lg btn-primary btn2" (click)="check()">Save</button>
+
+</form>
+</div>
+<button type="button" class="btn-lg btn-success btn1"><a class="linkcolor" routerLink="/address" >Back</a></button>
+<button type="button" class="btn-lg btn-danger btn1"><a class="linkcolor" routerLink="/review" >Next</a></button>
+
+

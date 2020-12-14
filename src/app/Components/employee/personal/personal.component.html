@@ -1,0 +1,57 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+<div>
+  <form #persondetails = "ngForm"  >
+
+   {{persondetails.value | json}}
+   <hr />
+   {{empModel | json}}
+    <br><br>
+    <div class="form-group">
+    <label for="name"><h5>Name:</h5></label>
+    <input class="form-control" type = "text" name = "name" placeholder = "Name"   [(ngModel)]="empModel.name">
+  </div>
+  
+    <div class="form-group">
+    <label for="date"><h5>Date of Birth:</h5></label>
+    <input  class="form-control" type = "date" name = "dob" placeholder = "Date of Birth" [(ngModel)]="empModel.dob">
+  </div>
+    <div class="form-group">
+    <label for="name"><h5>Email:</h5></label>
+    <input class="form-control" type = "text" name = "email" placeholder = "Email" [(ngModel)]="empModel.email"  #email="ngModel" 
+    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" 
+    required >
+</div>
+    
+    <div *ngIf="email.touched">
+      <p *ngIf="email.errors?.required">Email is a required field!</p>
+      <p *ngIf="email.errors?.pattern">This is not a valid Email!!!</p>
+    </div>
+    
+    <div class="form-group">
+    <label for="name"><h5>Hobby:</h5></label>
+    <select class="form-control"[(ngModel)]="empModel.hobby" name="hobby" [(ngModel)]="empModel.hobby">
+      <option *ngFor="let x of hobby"      [value]="x">{{x}} </option>
+    </select>
+    </div>
+  
+    <button type="button" class="btn-lg btn-primary btn2" (click)="check()">Save</button>
+ 
+ </form>
+ </div>
+<button type="button" class="btn-lg btn-success btn1"><a class="linkcolor" routerLink="/" >Back</a></button>
+<button type="button" class="btn-lg btn-danger btn1"><a class="linkcolor" routerLink="/address" >Next</a></button>
+
+
+</body>
+</html>
+
+
+

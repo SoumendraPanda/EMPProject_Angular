@@ -1,0 +1,35 @@
+
+    <h2>Personal Details</h2>
+<div>
+    <p>Employee Name:  {{this.name}}
+        <br>
+        Date of Birth: {{this.dob}}
+        <br>
+        Email: {{this.email}}
+        <br>
+        Hobby: {{this.hobby}}
+    </p>
+</div>
+<h2>Address Details</h2>
+<div>
+    Address Type: {{this. addresstype}}
+    <br>
+    Addres Line1: {{addressline1}}
+    <br>
+    Address Line2: {{addressline2}}
+    <br>
+    State:{{state}}
+</div>
+<h2>Education Details</h2>
+<div>
+    Institute Name:{{this.institutename}}
+    <br>
+    Degree:{{this.degree}}
+    <br>
+    Year of Completion:{{this.yearofcompletion}}
+</div>
+<br>
+
+<button type="button" class="btn-lg btn-success btn1"><a class="linkcolor" routerLink="/education" >Back</a></button>
+<button type="button" class="btn-lg btn-primary btn2" (click)="submit()" >Submit</button>
+
